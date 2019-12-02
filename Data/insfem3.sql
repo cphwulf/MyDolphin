@@ -1,0 +1,12 @@
+insert into members (name,year,active,compete,gender) values ("Ghita Kobbelgaard",1995,1,1,0);
+insert into members (name,year,active,compete,gender) values ("Sille Ibsen",2001,1,1,0);
+insert into members (name,year,active,compete,gender) values ("Janni Martinussen",2001,1,1,0);
+insert into members (name,year,active,compete,gender) values ("Nynne Nørlem",2002,1,1,0);
+insert into members (name,year,active,compete,gender) values ("Julie Fink",2001,1,1,0);
+insert into members (name,year,active,compete,gender) values ("Olivia Steenstrup",2000,1,1,0);
+insert into members (name,year,active,compete,gender) values ("Maya Nautrup Pedersen",1999,1,1,0);
+insert into members (name,year,active,compete,gender) values ("Julie B. Andersen",2002,1,1,0);
+insert into members (name,year,active,compete,gender) values ("Julie Martinussen",1997,1,1,0);
+insert into members (name,year,active,compete,gender) values ("Sara Falch",2002,1,1,0);
+insert into members (name,year,active,compete,gender) values ("Trine Rasmussen",1999,1,1,0);
+insert into members (name,year,active,compete,gender) values ("Signe Dam",1999,1,1,0);

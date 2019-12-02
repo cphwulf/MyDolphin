@@ -1,0 +1,17 @@
+insert into competition_details (competitionid,swimartid,swimdistid,genderid,resultstring) values (10486,1,4,1," 2:41.37");
+insert into competition_details (competitionid,swimartid,swimdistid,genderid,resultstring) values (10487,1,4,1," 2:43.10");
+insert into competition_details (competitionid,swimartid,swimdistid,genderid,resultstring) values (10488,1,4,1," 2:43.90");
+insert into competition_details (competitionid,swimartid,swimdistid,genderid,resultstring) values (10489,1,4,1," 2:49.04");
+insert into competition_details (competitionid,swimartid,swimdistid,genderid,resultstring) values (10490,1,4,1," 2:55.18");
+insert into competition_details (competitionid,swimartid,swimdistid,genderid,resultstring) values (10491,1,4,1," 2:55.55");
+insert into competition_details (competitionid,swimartid,swimdistid,genderid,resultstring) values (10492,1,4,1," 2:55.61");
+insert into competition_details (competitionid,swimartid,swimdistid,genderid,resultstring) values (10493,1,4,1," 2:56.21");
+insert into competition_details (competitionid,swimartid,swimdistid,genderid,resultstring) values (10494,1,4,1," 2:57.38");
+insert into competition_details (competitionid,swimartid,swimdistid,genderid,resultstring) values (10495,1,4,1," 3:02.57");
+insert into competition_details (competitionid,swimartid,swimdistid,genderid,resultstring) values (10496,1,4,1," 3:03.64");
+insert into competition_details (competitionid,swimartid,swimdistid,genderid,resultstring) values (10497,1,4,1," 3:10.39");
+insert into competition_details (competitionid,swimartid,swimdistid,genderid,resultstring) values (10498,1,4,1," 3:13.16");
+insert into competition_details (competitionid,swimartid,swimdistid,genderid,resultstring) values (10499,1,4,1," 3:15.32");
+insert into competition_details (competitionid,swimartid,swimdistid,genderid,resultstring) values (10500,1,4,1," 3:24.05");
+insert into competition_details (competitionid,swimartid,swimdistid,genderid,resultstring) values (10501,1,4,1," 3:34.13");
+insert into competition_details (competitionid,swimartid,swimdistid,genderid,resultstring) values (10502,1,4,1," 3:38.07");

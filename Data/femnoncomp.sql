@@ -1,0 +1,8 @@
+,Sarah Salling Larsen,2003,30.4,30.4,
+,Lærke Kirstine Johnsen,2003,31.1,1:01.50,
+,Line Heise,2003,30.73,1:32.23,
+,Mathilde Møller,2004,30.14,2:02.37,
+,Thea Brøndum,2004,31.6,31.6,
+,Sofie Skovgaard Sørensen,2004,31.03,1:02.63,
+,Caroline Christensen,2004,31.02,1:33.65,
+,Nete Kirial,2003,32.96,2:06.61,

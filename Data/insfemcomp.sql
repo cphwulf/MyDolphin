@@ -1,0 +1,17 @@
+insert into competition (date,eventtitle,place,country,memberid) values ("2019-11-10","Turnering nr. 2","Oure","DK",94);
+insert into competition (date,eventtitle,place,country,memberid) values ("2019-11-10","Turnering nr. 2","Oure","DK",95);
+insert into competition (date,eventtitle,place,country,memberid) values ("2019-11-10","Turnering nr. 2","Oure","DK",96);
+insert into competition (date,eventtitle,place,country,memberid) values ("2019-11-10","Turnering nr. 2","Oure","DK",97);
+insert into competition (date,eventtitle,place,country,memberid) values ("2019-11-10","Turnering nr. 2","Oure","DK",98);
+insert into competition (date,eventtitle,place,country,memberid) values ("2019-11-10","Turnering nr. 2","Oure","DK",99);
+insert into competition (date,eventtitle,place,country,memberid) values ("2019-11-10","Turnering nr. 2","Oure","DK",100);
+insert into competition (date,eventtitle,place,country,memberid) values ("2019-11-10","Turnering nr. 2","Oure","DK",102);
+insert into competition (date,eventtitle,place,country,memberid) values ("2019-11-10","Turnering nr. 2","Oure","DK",109);
+insert into competition (date,eventtitle,place,country,memberid) values ("2019-11-10","Turnering nr. 2","Oure","DK",111);
+insert into competition (date,eventtitle,place,country,memberid) values ("2019-11-10","Turnering nr. 2","Oure","DK",112);
+insert into competition (date,eventtitle,place,country,memberid) values ("2019-11-10","Turnering nr. 2","Oure","DK",113);
+insert into competition (date,eventtitle,place,country,memberid) values ("2019-11-10","Turnering nr. 2","Oure","DK",114);
+insert into competition (date,eventtitle,place,country,memberid) values ("2019-11-10","Turnering nr. 2","Oure","DK",115);
+insert into competition (date,eventtitle,place,country,memberid) values ("2019-11-10","Turnering nr. 2","Oure","DK",116);
+insert into competition (date,eventtitle,place,country,memberid) values ("2019-11-10","Turnering nr. 2","Oure","DK",118);
+insert into competition (date,eventtitle,place,country,memberid) values ("2019-11-10","Turnering nr. 2","Oure","DK",119);
