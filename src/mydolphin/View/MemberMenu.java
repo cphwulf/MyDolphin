@@ -5,7 +5,9 @@
  */
 package mydolphin.View;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import mydolphin.Model.Disciplin;
 import mydolphin.Util.UI;
 
 /**
@@ -59,4 +61,5 @@ public class MemberMenu {
 		System.out.println("6) get style and distance (if compete)");
 		System.out.println("9) Exit"); 
 	}
+
 }

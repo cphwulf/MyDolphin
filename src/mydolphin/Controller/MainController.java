@@ -30,6 +30,7 @@ public class MainController {
 	private FeeMenu feeMenu;
 	private FilterMemberMenu filterMemberMenu;
 	private MemberHandler memberHandler;
+	private DisciplinHandler disciplinHandler;
 	private ResultHandler resultHandler;
 	private FeeHandler feeHandler;
 	private ArrayList<Member> members;
@@ -40,10 +41,12 @@ public class MainController {
 	private ArrayList<Disciplin> disciplins;
 	private HashMap<String,String> params;
 	
-	public MainController(UI ui) {
+	public MainController(UI ui) throws SQLException {
 		this.ui = ui;
 		mainMenu = new MainMenu();
 		memberHandler = new MemberHandler();
+		disciplinHandler = new DisciplinHandler();
+		disciplins = disciplinHandler.getAllDisciplins();
 	}
 	
 	public void runProgram() throws SQLException {

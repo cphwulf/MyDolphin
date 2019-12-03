@@ -20,6 +20,14 @@ public class Member implements MemberI{
 		this.gender = gender;
 		this.active = active;
 	}
+
+	public Member(int id, String name, String email, int year, boolean active) {
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.year = year;
+		this.active = active;
+	}
 	
 	public void setCompete(Boolean bool) {
 		this.compete = bool;

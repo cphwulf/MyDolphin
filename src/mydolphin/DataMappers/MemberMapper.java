@@ -58,7 +58,46 @@ public class MemberMapper {
 		return memberid;
 		
 	}
+	/*
+MemberID	int(11)	NO	PRI	NULL	auto_increment
+Employeeid	int(11)	YES		NULL	
+Name	varchar(255)	YES		NULL	
+Year	int(11)	YES		NULL	
+Gender	int(11)	YES		NULL	
+Active	tinyint(4)	YES		NULL	
+Compete	tinyint(4)	YES		NULL	
+email	varchar(255)	YES		NULL	
+disciplinid	int(11)	YES		NULL	
+styleid	int(11)	YES		NULL	
+*/
 	
+	public ArrayList<Member> getAllMembersFromDBBasic() throws SQLException {
+		ArrayList<Member> members = null;
+		// connect til DB
+		//int id, String name, String email, int year, boolean active
+		Connection conn = DBConnector.getInstance().getConnection();
+		// initialisere JDBC-komponenter
+		ResultSet result = null;
+		Statement stmt = null;
+		// Queries
+		String query = "SELECT  memberid, name,email,year,active FROM members";
+		stmt = conn.createStatement();
+		result = stmt.executeQuery(query);
+		while(result.next()) {
+			int memberid = result.getInt("memberid");
+			int year = result.getInt("year");
+			boolean active = result.getBoolean("active");
+			String name = result.getString("name");
+			String email = result.getString("email");
+			Member member = new Member(memberid,name,email,year,active);
+			members.add(member);
+		}
+		
+		// lave Member-objekter
+		// sætte dem i listen
+		
+		return members;
+	}
 	
 	public ArrayList<Member> getAllMembersFromDB() throws SQLException {
 		ArrayList<Member> members = null;
@@ -79,8 +118,9 @@ public class MemberMapper {
 		// sætte dem i listen
 		
 		return members;
-		
 	}
+
+
 	public Member getMemberFromDBbyEmail(String email) {
 		Member member = null;
 		Connection conn = null;
