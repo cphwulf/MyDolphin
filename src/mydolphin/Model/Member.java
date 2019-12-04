@@ -1,11 +1,12 @@
 package mydolphin.Model;
 import java.time.*;
-public class Member implements MemberI{
-	int id;
+public class Member implements MemberI, Comparable<Member>{
+	int memberid;
 	String name;
 	String email;
 	int year;
 	int gender;
+	int debts;
 	boolean active;
 	boolean compete;
 	
@@ -21,13 +22,30 @@ public class Member implements MemberI{
 		this.active = active;
 	}
 
-	public Member(int id, String name, String email, int year, boolean active) {
-		this.id = id;
+	public Member(int memberid, String name, String email, int year, boolean active) {
+		this.memberid = memberid;
 		this.name = name;
 		this.email = email;
 		this.year = year;
 		this.active = active;
 	}
+
+	public int getMemberid() {
+		return memberid;
+	}
+
+	public void setMemberid(int memberid) {
+		this.memberid = memberid;
+	}
+
+	public boolean isCompete() {
+		return compete;
+	}
+
+	public void setCompete(boolean compete) {
+		this.compete = compete;
+	}
+	
 	
 	public void setCompete(Boolean bool) {
 		this.compete = bool;
@@ -97,18 +115,31 @@ public class Member implements MemberI{
 	}
 	
 	public void setId(int memberid) {
-		this.id=memberid;
+		this.memberid=memberid;
 	}
 	@Override
 	public String toString() {
 		return "Model.Member{" +
-			"memberID=" + id +
+			"memberID=" + memberid +
 			", name='" + name + '\'' +
 			", email='" + email + '\'' +
 			", birthYear=" + year +
 			", isActive=" + active +
 			", isCompetitive=" + compete +
 			'}';
+	}
+
+	@Override
+	public int compareTo(Member o) {
+		int retVal = 0;
+		if (this.getAge() > o.getAge()) {
+			retVal = 1;
+		} else if (this.getAge() < o.getAge()) {
+			retVal = -1;
+		} else {
+			retVal = 0;
+		} 
+		return retVal;
 	}
 	
 }

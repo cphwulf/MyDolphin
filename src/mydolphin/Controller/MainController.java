@@ -3,6 +3,8 @@ package mydolphin.Controller;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Set;
+import java.util.TreeMap;
 import mydolphin.View.MainMenu;
 import mydolphin.View.MemberMenu;
 import mydolphin.View.ResultMenu;
@@ -34,6 +36,7 @@ public class MainController {
 	private ResultHandler resultHandler;
 	private FeeHandler feeHandler;
 	private ArrayList<Member> members;
+	private TreeMap<Member,Integer> membersInDept;
 	private ArrayList<Member> filteredmembers;
 	private ArrayList<Result> results;
 	private ArrayList<Result> filteredresults;
@@ -58,7 +61,8 @@ public class MainController {
 			switch(inputValue) {
 				case 1:
 					//show all members
-					members = memberHandler.getAllMembers();break;
+					//members = memberHandler.getAllMembers();break;
+					memberHandler.showAllMembers();break;
 				case 2:
 					//show members sorted by filter
 					params = new HashMap<>();
@@ -79,6 +83,22 @@ public class MainController {
 					System.out.println(params.toString());
 					memberid = memberHandler.writeMemberToStorage(params);
 					// TODO: consider maintaining a list of members
+					break;
+					
+				case 8:
+					//show all members
+					membersInDept = new TreeMap<>();
+					inputValue = ui.getInputInt("Get needed pays from this yeear: ");
+					//membersInDept = feeHandler.getAllMembersYear(inputValue, memberHandler);
+						
+					feeHandler.getAllMembersYear(inputValue, memberHandler);
+					/*
+					Set<Member> keys = membersInDept.keySet();
+					for (Member key : keys) {
+						System.out.println("Member " + key.getName() + "has dept: " + membersInDept.get(key));
+					}
+*/
+
 					break;
 					
 				default:

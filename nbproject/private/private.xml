@@ -20,7 +20,9 @@
             <file>file:/Users/thor/NetBeansProjects/MyDolphin/src/mydolphin/Model/Team.java</file>
             <file>file:/Users/thor/NetBeansProjects/MyDolphin/src/mydolphin/View/ResultMenu.java</file>
             <file>file:/Users/thor/NetBeansProjects/MyDolphin/src/mydolphin/View/MemberMenu.java</file>
+            <file>file:/Users/thor/NetBeansProjects/MyDolphin/test/mydolphin/DataMappers/FeeMapperTest.java</file>
             <file>file:/Users/thor/NetBeansProjects/MyDolphin/src/mydolphin/Util/DBConnector.java</file>
+            <file>file:/Users/thor/NetBeansProjects/MyDolphin/src/mydolphin/DataMappers/FeeMapper.java</file>
             <file>file:/Users/thor/NetBeansProjects/MyDolphin/src/mydolphin/Controller/FeeHandler.java</file>
             <file>file:/Users/thor/NetBeansProjects/MyDolphin/src/mydolphin/Model/MemberCompetitor.java</file>
             <file>file:/Users/thor/NetBeansProjects/MyDolphin/src/mydolphin/Model/Employee.java</file>

@@ -21,6 +21,11 @@ public class Fee {
 		this.feeYear = feeYear;
 		this.amount = amount;
 	}
+	public Fee(int memberid, int feeYear, int amount) {
+		this.memberID = memberid;
+		this.feeYear = feeYear;
+		this.amount = amount;
+	}
 	
 	public int getFeeID() {
 		return feeID;

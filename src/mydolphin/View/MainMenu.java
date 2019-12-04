@@ -14,6 +14,7 @@ public class MainMenu {
         menu += "5. Indtast et resultat\n";
         menu += "6. Vis ranglister for alle discipliner\n";
         menu += "7. Vis alle resultater\n";
+        menu += "8. Vis medlemmer med restance\n";
         menu += "9. Afslut\n";
 	    System.out.println(menu);
     }

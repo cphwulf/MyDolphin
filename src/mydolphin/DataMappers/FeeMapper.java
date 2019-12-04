@@ -38,19 +38,25 @@ public class FeeMapper {
     public ArrayList<Fee> getAllFeesYear(int year){
 
         ArrayList<Fee> feeList = new ArrayList<>();
-	String query = "SELECT m.name, SUM(f.amount) FROM members m,  fee f "
+	String xquery = "SELECT m.name, SUM(f.amount) FROM members m,  fee f "
 		+ "WHERE m.memberid = f.memberid AND f.fee_year = " + year + " "
 		+ "GROUP BY m.memberid";
 
+	String query = "select m.MemberID,  m.name, f.yearsum from members m "
+		+ "join ( "
+		+ "select memberid, fee_year, sum(amount) as yearsum "
+		+ "from fee "
+		+ "group by memberid, fee_year"
+		+ ") f "
+		+ "on m.MemberID=f.memberid and f.fee_Year="+year;
         try (Connection con = DBConnector.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement(query))  {
             ResultSet resultSet = ps.executeQuery();
             while (resultSet.next()){
-                int feeID = resultSet.getInt("fee_id");
                 int memberID = resultSet.getInt("memberid");
-                int feeYear = resultSet.getInt("fee_year");
-                int amount = resultSet.getInt("amount");
-                feeList.add(new Fee(feeID, memberID, feeYear, amount));
+                String name = resultSet.getString("name");
+                int amount = resultSet.getInt("yearsum");
+                feeList.add(new Fee(memberID, year, amount));
             }
         } catch (SQLException e) {
             System.out.println("Fejl i connection til database");

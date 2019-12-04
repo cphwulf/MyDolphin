@@ -25,6 +25,7 @@ public class MemberMapperTest {
 	public void setUp() {
 		//{compete=true, Disciplin2=200_Fri, Disciplin1=50_Medley, year=2000, Disciplin0=100_Fri, active=true, email=r@d.dk, Name=Kurt}
 	}
+	/*
 
 	@Test
 	public void testWriteMemberToDB_HashMap() {
@@ -85,6 +86,27 @@ public class MemberMapperTest {
 		MemberMapper instance = new MemberMapper();
 		instance.writeMemberToDB(member);
 		fail("The test case is a prototype.");
+	}
+
+	@Test
+	public void testGetAllMembersFromDBBasic() throws Exception {
+		System.out.println("getAllMembersFromDBBasic");
+		MemberMapper instance = new MemberMapper();
+		ArrayList<Member> expResult = null;
+		ArrayList<Member> result = instance.getAllMembersFromDBBasic();
+		assertEquals(expResult, result);
+		fail("The test case is a prototype.");
+	}
+*/
+
+	@Test
+	public void testGetMemberById() {
+		System.out.println("getMemberById");
+		int id = 94;
+		MemberMapper instance = new MemberMapper();
+		Member expResult = null;
+		Member result = instance.getMemberById(id);
+		assertEquals(expResult, result);
 	}
 	
 }

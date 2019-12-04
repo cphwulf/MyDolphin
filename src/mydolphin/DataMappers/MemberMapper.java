@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import mydolphin.Model.Member;
 
-public class MemberMapper {
+public class MemberMapper implements MemberMapperI{
 	
 	public int writeMemberToDB(HashMap<String,String> params) {
 		//{compete=true, Disciplin2=200_Fri, Disciplin1=50_Medley, year=2000, Disciplin0=100_Fri, active=true, email=r@d.dk, Name=Kurt}
@@ -20,7 +20,7 @@ public class MemberMapper {
 			String tmpKey = "Disciplin" + i;
 			keys.add(params.get(tmpKey));
 		}
-
+		
 		try {
 			Connection conn = DBConnector.getInstance().getConnection();
 			//new Member(id,name,year,active,competitor);
@@ -59,20 +59,20 @@ public class MemberMapper {
 		
 	}
 	/*
-MemberID	int(11)	NO	PRI	NULL	auto_increment
-Employeeid	int(11)	YES		NULL	
-Name	varchar(255)	YES		NULL	
-Year	int(11)	YES		NULL	
-Gender	int(11)	YES		NULL	
-Active	tinyint(4)	YES		NULL	
-Compete	tinyint(4)	YES		NULL	
-email	varchar(255)	YES		NULL	
-disciplinid	int(11)	YES		NULL	
-styleid	int(11)	YES		NULL	
-*/
+	MemberID	int(11)	NO	PRI	NULL	auto_increment
+	Employeeid	int(11)	YES		NULL
+	Name	varchar(255)	YES		NULL
+	Year	int(11)	YES		NULL
+	Gender	int(11)	YES		NULL
+	Active	tinyint(4)	YES		NULL
+	Compete	tinyint(4)	YES		NULL
+	email	varchar(255)	YES		NULL
+	disciplinid	int(11)	YES		NULL
+	styleid	int(11)	YES		NULL
+	*/
 	
 	public ArrayList<Member> getAllMembersFromDBBasic() throws SQLException {
-		ArrayList<Member> members = null;
+		ArrayList<Member> members = new ArrayList<>();
 		// connect til DB
 		//int id, String name, String email, int year, boolean active
 		Connection conn = DBConnector.getInstance().getConnection();
@@ -100,7 +100,7 @@ styleid	int(11)	YES		NULL
 	}
 	
 	public ArrayList<Member> getAllMembersFromDB() throws SQLException {
-		ArrayList<Member> members = null;
+		ArrayList<Member> members = new ArrayList<>();
 		// connect til DB
 		Connection conn = DBConnector.getInstance().getConnection();
 		// initialisere JDBC-komponenter
@@ -119,8 +119,8 @@ styleid	int(11)	YES		NULL
 		
 		return members;
 	}
-
-
+	
+	
 	public Member getMemberFromDBbyEmail(String email) {
 		Member member = null;
 		Connection conn = null;
@@ -153,7 +153,7 @@ styleid	int(11)	YES		NULL
 		return member;
 	}
 	
-	public ArrayList<Member>  getMembersFromDBLike(String field, String filter) {
+	public ArrayList<Member> getMembersFromDBLike(String field, String filter) {
 		ArrayList<Member> members = new ArrayList<>();
 		Member member = null;
 		Connection conn = null;
@@ -223,5 +223,36 @@ styleid	int(11)	YES		NULL
 		}
 		
 	}
-	
+	public Member  getMemberById(int id) {
+		Member member = null;
+		Connection conn = null;
+		try {
+			conn = DBConnector.getInstance().getConnection();
+		} catch (Exception e) {
+			System.out.println("Error conn" + e);
+		}
+		ResultSet result = null;
+		Statement stmt = null;
+		// Queries
+		String query = "SELECT * FROM members WHERE memberid = "+id;
+		System.out.println("q: " + query);
+		try {
+			stmt = conn.createStatement();
+			result = stmt.executeQuery(query);
+			if (result.next()) {
+				member = new Member(
+					result.getString("name"),
+					result.getString("email"),
+					result.getInt("year"),
+					result.getInt("gender"),
+					result.getBoolean("active")
+				);
+			} else {
+				throw new Exception("No member by memberid " + id);
+			}
+		} catch (Exception e) {
+			System.out.println("Q failed " + e);
+		}
+		return  member;
+	}
 }
